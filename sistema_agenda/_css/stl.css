@@ -1,0 +1,245 @@
+*{
+	border: 0;
+	margin: 0;
+
+}
+
+.back{ /*conf para a img de fundo*/
+    background-image: url('background.png');
+    background-repeat: no-repeat;    
+    
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    overflow: auto;  /*quando aparece barra de rolagem o overflow:auto ñ deixa uma quebra de imagem e ela continua 100%*/
+    padding: 3em;
+    position: absolute; 
+    background-size: cover; /*preenche de acordo com o tamanho de esta inserido*/
+}
+	 
+section#interface{
+	width: 750px;
+	margin: 10px auto 5px auto;
+}
+
+@font-face{
+	font-family: AdobeMingStd-Light;  /*"ñ fez diferença"*/
+	src: url("../_fonts/AdobeMingStd-Light.ttf") format("truetype"); /* "format too ñ"*/
+}
+
+
+a{
+	color: #000;
+	text-decoration: none;
+}
+
+a:hover{
+	color: #DF4B4B; 
+	
+}
+
+a#cadastrar{
+	color: #f7b2b2;
+	text-decoration: none;
+}
+
+a#cadastrar:hover{
+	color: #DF4B4B; 
+	
+}
+
+
+body{
+	/*background: #fff;*/
+	color: #fff;
+	font-family: AdobeMingStd-Light;
+	font-size: 20px;
+}
+
+nav, #principal{
+	-ms-box-sizing: border-box;
+	-moz-box-sinzing: border-box;
+	-o-box-sinzing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;	
+	font-size: 20px;                   /* 1em*/
+	text-align: center; /* para deixar o menu no centro*/
+	width: 100%;   /*modifiquei*/
+	
+}
+
+ul{
+	list-style: none;  /*tirar os pontinhos da lista*/
+	margin-top: 15px;	
+}
+ul li{
+
+	margin-bottom: 5px;
+	background: #FA6565;
+	padding: 5px;
+	display: inline; /*modifiquei (quando for passar para responsivo media menores colocar apenas block)*/
+}
+ul li:hover{
+	background: #000;
+}
+#conteudo, #principal{
+	margin: 0 auto;
+	text-align: center;
+}
+
+#principal{
+	width: 100%;
+}
+
+.config{
+	transition: 0;  /*pode usar essa transição na ul/li porem a ocorrencia dela nas demais class conf não ocorreria*/
+}
+
+fieldset{
+	border: 2.5px solid #000;   
+	border-radius: 30px;
+	padding: 20px;
+	margin: 15px auto;
+	text-align: left;
+	background: rgba(0, 0, 0, .8);
+	width: 60%;	
+	height: auto;
+}
+fieldset legend{
+	font: bold;
+	color: #F82727;
+	font-size: 25px;
+	padding-top: 17px;
+}
+fieldset  div{
+	margin: 10px;
+}
+fieldset#fieldset-logar{
+	width: 30%;
+}
+fieldset#fieldset-logar a{
+	color: rgba(249, 105, 105, .3);
+
+}
+fieldset#fieldset-logar a:hover{
+	color: rgba(249, 105, 105, .5);
+
+}
+
+
+input[type="checkbox"], input[type="radio"], select{  
+	background: #eee; /*fundo dos checkbox*/
+	cursor: pointer;
+
+}
+
+input[type="date"], input[type="email"], input[type="number"], input[type="text"], input[type="search"], input[type="password"]{
+	background: #eee;
+	border-radius: 10px;
+	color: #000000;     /*cor dos caracteres inseridos pelo usuario*/
+	font-size: 17px;
+	padding: 5px;
+}
+
+input[type="date"]:focus, input[type="email"]:focus, input[type="number"]:focus, input[type="text"]:focus, input[type="search"]:focus,input[type="password"]:focus{
+	background: #c6ecf9;  /*troca pra essa cor quando acontece o clique*/
+}
+input[type="email"]:disabled{ /*conf o campo do email */
+	/*background: transparent; */
+	color: #d3d3d3;         
+}
+input[type="file"]{
+	opacity: 0;
+	filter: alpha(opacity=0);  /*xxx*/	
+	width: 100px;
+}
+input[type="submit"]{
+	background: #FC4040;
+	border-radius: 10px 10px; /*deixa apenas duas bordas radius*/
+	color: #500;
+	font-family: "chalet";
+	font-size: 20px;
+}
+input.btn2{
+	color:#CE5656;
+	background: #000;
+	font: bold;
+	text-align: center;
+}
+input.btn2:hover{
+	color:#F82727;
+	}
+input[type="submit"]:hover{	
+	cursor: pointer;       /*muda para a mãozinha*/
+}
+label{
+	cursor: pointer;
+	font-size: 20px;
+	color: #fff;
+}
+.add-arquivo{
+	background: #eee url(../img/btn_buscar.jpg) no-repeat 100% 1px;
+	border: thin solid #000;
+	height: 290px;	 /*xxxx*/
+	display: inline;	
+	text-align: right; /*xxx*/
+}
+.add-arquivo:hover{
+	cursor: pointer;  /*ñ está funcionando*/
+}
+
+.mensagem{
+	background: yellow;
+	border-radius: .5em;
+	color: #000;
+	font-family: helvetica, verdana;
+	font-size: .8em;
+	padding: .2em;
+
+}
+
+table{
+	
+	border-radius: 30px;
+	padding: 13px;
+	cursor: default;
+	width: 100%;
+}
+
+table img{
+	max-width: 100%;
+
+
+}
+
+table td{
+	border: 1px solid #212121;
+	border-radius: 3px;
+	padding: 3px;
+	word-wrap: break-word; /* verificar (preencimento)*/
+	text-align: left;
+
+}
+table thead tr{
+	background: rgba(0,0,0,.8);
+}
+/*deixar cada linha de uma cor*/
+table tr{
+	background: #000;
+}
+ /*table tr:nth-child(even){
+	background: #edc9c9;
+}
+*/
+
+
+
+
+
+
+
+
+
+
+
